@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias y Cambio de Fuente</title>
+    <style>
+        .noticia {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .descripcion {
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Noticias Recientes</h1>
+
+    <!-- Noticia 1 -->
+    <div class="noticia">
+        <h2>Título de la Noticia 1</h2>
+        <p class="descripcion">Esta es la descripción de la noticia 1. Aquí se detalla el contenido de la noticia, como los hechos relevantes o la información más importante.</p>
+    </div>
+
+    <!-- Noticia 2 -->
+    <div class="noticia">
+        <h2>Título de la Noticia 2</h2>
+        <p class="descripcion">Esta es la descripción de la noticia 2. Esta noticia también tiene detalles importantes que se comparten con los lectores.</p>
+    </div>
+
+    <!-- Noticia 3 -->
+    <div class="noticia">
+        <h2>Título de la Noticia 3</h2>
+        <p class="descripcion">Esta es la descripción de la noticia 3. El contenido de esta noticia es crucial para la comprensión del evento mencionado.</p>
+    </div>
+
+    <!-- Botones para cambiar el tamaño de la fuente -->
+    <button onclick="cambiarFuente('descripcion', '14px')">Fuente Pequeña</button>
+    <button onclick="cambiarFuente('descripcion', '20px')">Fuente Mediana</button>
+    <button onclick="cambiarFuente('descripcion', '24px')">Fuente Grande</button>
+
+    <script>
+        // Función para cambiar el tamaño de la fuente de los párrafos con la clase especificada
+        function cambiarFuente(clase, tamano) {
+            // Seleccionar todos los elementos con la clase especificada
+            var elementos = document.querySelectorAll('.' + clase);
+            
+            // Cambiar el tamaño de la fuente de cada uno de los elementos seleccionados
+            elementos.forEach(function(elemento) {
+                elemento.style.fontSize = tamano;
+            });
+        }
+    </script>
+
+</body>
+</html>

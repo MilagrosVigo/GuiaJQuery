@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido de la Página</title>
+</head>
+<body>
+    <h1>Cabecera de la Página</h1>
+    <p>Este es el cuerpo de la página.</p>
+
+    <button onclick="mostrarContenido('head')">Mostrar Cabecera</button>
+    <button onclick="mostrarContenido('body')">Mostrar Cuerpo</button>
+
+    <script>
+        function mostrarContenido(tipo) {
+            if (tipo === 'head') {
+                alert(document.head.innerHTML);  // Muestra el contenido de la cabecera
+            } else {
+                alert(document.body.innerHTML);  // Muestra el contenido del cuerpo
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar Palabras con Strong</title>
+    <style>
+        strong {
+            cursor: pointer; 
+            color: blue; 
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Haz clic en las palabras para ocultarlas</h1>
+    <p>Este es un ejemplo de página donde las palabras con el elemento <strong>strong</strong> se pueden ocultar al hacer clic en ellas.</p>
+    
+    <p>
+        Algunas palabras en <strong>negrita</strong> son muy <strong>importantes</strong> para este ejemplo. 
+        También <strong>ocultaremos</strong> otras palabras si haces clic sobre ellas.
+    </p>
+    
+    <script>
+        $(document).ready(function() {
+            
+            $("strong").click(function() {
+                $(this).hide(); 
+            });
+        });
+    </script>
+</body>
+</html>

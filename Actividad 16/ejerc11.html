@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipervínculo Dinámico</title>
+</head>
+<body>
+    <a id="link" href="#">Enlace inicial</a><br><br>
+    <button onclick="cambiarLink('https://www.ejemplo1.com', 'Enlace 1')">Enlace 1</button>
+    <button onclick="cambiarLink('https://www.ejemplo2.com', 'Enlace 2')">Enlace 2</button>
+    <button onclick="cambiarLink('https://www.ejemplo3.com', 'Enlace 3')">Enlace 3</button>
+
+    <script>
+        function cambiarLink(url, texto) {
+            document.getElementById('link').href = url;
+            document.getElementById('link').innerText = texto;
+        }
+    </script>
+</body>
+</html>

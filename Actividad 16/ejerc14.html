@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocultar Palabras</title>
+</head>
+<body>
+    <p>Haz clic en cualquier palabra en <strong>negrita</strong> para ocultarla.</p>
+    <p>Estas palabras son <strong>importantes</strong> para el ejemplo. También podemos <strong>ocultarlas</strong> al hacer clic.</p>
+
+    <script>
+        document.querySelectorAll('strong').forEach(function(element) {
+            element.addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

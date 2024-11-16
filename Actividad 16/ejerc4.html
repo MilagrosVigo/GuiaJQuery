@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fila al Hacer Click</title>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            width: 45%;
+            border-collapse: collapse;
+            margin: 20px;
+            float: left;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+  
+        tr {
+            cursor: pointer;
+        }
+
+        tr.clicked {
+            background-color: lightyellow; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tablas con Cambio de Color de Fila</h1>
+
+    <table>
+        <caption>Primera Tabla</caption>
+        <tr>
+            <td>Fila 1 - Columna 1</td>
+            <td>Fila 1 - Columna 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2 - Columna 1</td>
+            <td>Fila 2 - Columna 2</td>
+        </tr>
+        <tr>
+            <td>Fila 3 - Columna 1</td>
+            <td>Fila 3 - Columna 2</td>
+        </tr>
+    </table>
+
+   
+    <table>
+        <caption>Segunda Tabla</caption>
+        <tr>
+            <td>Fila 1 - Columna 1</td>
+            <td>Fila 1 - Columna 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2 - Columna 1</td>
+            <td>Fila 2 - Columna 2</td>
+        </tr>
+        <tr>
+            <td>Fila 3 - Columna 1</td>
+            <td>Fila 3 - Columna 2</td>
+        </tr>
+    </table>
+
+    <script>
+       
+        $(document).ready(function() {
+            $('table:first tr').click(function() {
+                
+                $(this).toggleClass('clicked');
+            });
+        });
+    </script>
+
+</body>
+</html>

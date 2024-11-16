@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturar Evento Click con jQuery</title>
+    <!-- Incluir la librería jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Dos párrafos -->
+    <p id="parrafo1">Este es el primer párrafo. Haz clic aquí para capturar el evento.</p>
+    <p id="parrafo2">Este es el segundo párrafo. Este no debería capturar el evento.</p>
+
+    <script>
+        // Capturar el evento click solo del primer párrafo
+        $(document).ready(function() {
+            $('#parrafo1').click(function() {
+                alert('Hiciste clic en el primer párrafo');
+            });
+        });
+    </script>
+
+</body>
+</html>

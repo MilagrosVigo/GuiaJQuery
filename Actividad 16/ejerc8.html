@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con Estilos</title>
+    <style>
+        /* Estilo para thead */
+        .estiloThead {
+            background-color: #4CAF50;  /* Fondo verde */
+            color: white;               /* Texto blanco */
+            font-weight: bold;          /* Negrita */
+        }
+
+        /* Estilo para tbody */
+        .estiloTbody {
+            background-color: #f2f2f2;  /* Fondo gris claro */
+            color: black;               /* Texto negro */
+        }
+
+        /* Estilo común para las tablas */
+        table {
+            width: 50%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td, th {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tabla con Estilos Asociados y Desasociados</h1>
+
+    <!-- Tabla -->
+    <table id="miTabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alicia</td>
+                <td>30</td>
+                <td>Madrid</td>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>25</td>
+                <td>Barcelona</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>35</td>
+                <td>Valencia</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Botones para asociar y desasociar clases -->
+    <button onclick="asociarClases()">Asociar Estilos</button>
+    <button onclick="desasociarClases()">Desasociar Estilos</button>
+
+    <script>
+        function asociarClases() {
+            // Obtener la tabla y sus secciones
+            var tabla = document.getElementById("miTabla");
+            var thead = tabla.querySelector("thead");
+            var tbody = tabla.querySelector("tbody");
+
+            // Asociar las clases de estilo a thead y tbody
+            thead.classList.add("estiloThead");
+            tbody.classList.add("estiloTbody");
+        }
+
+        function desasociarClases() {
+            // Obtener la tabla y sus secciones
+            var tabla = document.getElementById("miTabla");
+            var thead = tabla.querySelector("thead");
+            var tbody = tabla.querySelector("tbody");
+
+            // Eliminar las clases de estilo de thead y tbody
+            thead.classList.remove("estiloThead");
+            tbody.classList.remove("estiloTbody");
+        }
+    </script>
+
+</body>
+</html>

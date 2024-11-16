@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redimensionar Div</title>
+    <style>
+        #resizeDiv {
+            width: 800px;
+            height: 70px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="resizeDiv" ondblclick="redimensionar()">Doble clic para redimensionar</div>
+
+    <script>
+        let isResized = false;
+        function redimensionar() {
+            const div = document.getElementById('resizeDiv');
+            if (isResized) {
+                div.style.width = '800px';
+                div.style.height = '70px';
+            } else {
+                div.style.width = '250px';
+                div.style.height = '250px';
+            }
+            isResized = !isResized;
+        }
+    </script>
+</body>
+</html>

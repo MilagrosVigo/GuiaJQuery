@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con Estilos</title>
+    <style>
+        .headerStyle {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .bodyStyle {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="asociarClase()">Asociar clases</button>
+    <button onclick="desasociarClase()">Desasociar clases</button>
+
+    <table>
+        <thead id="thead">
+            <tr>
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+            </tr>
+            <tr>
+                <td>Dato 3</td>
+                <td>Dato 4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function asociarClase() {
+            document.getElementById('thead').classList.add('headerStyle');
+            document.getElementById('tbody').classList.add('bodyStyle');
+        }
+
+        function desasociarClase() {
+            document.getElementById('thead').classList.remove('headerStyle');
+            document.getElementById('tbody').classList.remove('bodyStyle');
+        }
+    </script>
+</body>
+</html>

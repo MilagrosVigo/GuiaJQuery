@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Tabla</title>
+    <style>
+        table {
+            width: 30%;
+            margin: 20px;
+            border-collapse: collapse;
+            border: 1px solid black;
+            float: left;
+            margin-right: 30px;
+        }
+        
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Modificar el contenido de la primera tabla</h1>
+
+ 
+    <table id="tabla1">
+        <tr>
+            <td>Texto 1</td>
+            <td>Texto 2</td>
+            <td>Texto 3</td>
+        </tr>
+        <tr>
+            <td>Texto 4</td>
+            <td>Texto 5</td>
+            <td>Texto 6</td>
+        </tr>
+        <tr>
+            <td>Texto 7</td>
+            <td>Texto 8</td>
+            <td>Texto 9</td>
+        </tr>
+    </table>
+
+
+    <table id="tabla2">
+        <tr>
+            <td>Texto A</td>
+            <td>Texto B</td>
+            <td>Texto C</td>
+        </tr>
+        <tr>
+            <td>Texto D</td>
+            <td>Texto E</td>
+            <td>Texto F</td>
+        </tr>
+        <tr>
+            <td>Texto G</td>
+            <td>Texto H</td>
+            <td>Texto I</td>
+        </tr>
+    </table>
+
+  
+    <button onclick="cambiarContenido()">Cambiar contenido de la primera tabla</button>
+
+    <script>
+        function cambiarContenido() {
+            
+            var tabla1 = document.getElementById("tabla1");
+            
+           
+            for (var i = 0; i < tabla1.rows.length; i++) {
+                var fila = tabla1.rows[i];
+                for (var j = 0; j < fila.cells.length; j++) {
+                    
+                    fila.cells[j].innerText = "-";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

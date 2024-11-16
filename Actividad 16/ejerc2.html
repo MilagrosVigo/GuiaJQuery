@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fila al Hacer Click</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+      
+        tr {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tabla con Cambio de Color</h1>
+
+   
+    <table>
+        <tr>
+            <td>Fila 1 - Celda 1</td>
+            <td>Fila 1 - Celda 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2 - Celda 1</td>
+            <td>Fila 2 - Celda 2</td>
+        </tr>
+    </table>
+
+    <script>
+        
+        $(document).ready(function() {
+            $('tr').click(function() {
+                
+                $(this).css('background-color', 'yellow');
+            });
+        });
+    </script>
+
+</body>
+</html>

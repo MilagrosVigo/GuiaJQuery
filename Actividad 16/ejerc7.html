@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Hipervínculo</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Definir y cambiar hipervínculos</h1>
+
+  
+    <a id="miEnlace" href="" target="_blank">Haz clic aquí</a>
+
+    <br><br>
+
+   
+    <button onclick="cambiarHipervinculo('https://www.google.com', 'Ir a Google')">Google</button>
+    <button onclick="cambiarHipervinculo('https://www.facebook.com', 'Ir a Facebook')">Facebook</button>
+    <button onclick="cambiarHipervinculo('https://www.twitter.com', 'Ir a Twitter')">Twitter</button>
+
+    <script>
+        function cambiarHipervinculo(url, texto) {
+            
+            var enlace = document.getElementById("miEnlace");
+            
+            
+            enlace.href = url;
+            enlace.innerText = texto;
+        }
+    </script>
+
+</body>
+</html>

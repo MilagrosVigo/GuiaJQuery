@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones de Cambio de Color</title>
+</head>
+<body>
+    <button id="btn1" onmousedown="cambiarColor(this)" onmouseup="restaurarColor(this)">Botón 1</button>
+    <button id="btn2" onmousedown="cambiarColor(this)" onmouseup="restaurarColor(this)">Botón 2</button>
+
+    <script>
+        function cambiarColor(button) {
+            button.style.backgroundColor = 'lightgreen';
+        }
+
+        function restaurarColor(button) {
+            button.style.backgroundColor = '';
+        }
+    </script>
+</body>
+</html>

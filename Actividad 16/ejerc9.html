@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Contenido HTML</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la página de demostración</h1>
+    <p>Esta es una página de ejemplo para mostrar el contenido HTML de la cabecera y el cuerpo.</p>
+
+    <button onclick="mostrarCabecera()">Mostrar Contenido de la Cabecera</button>
+    <button onclick="mostrarCuerpo()">Mostrar Contenido del Cuerpo</button>
+
+    <script>
+        function mostrarCabecera() {
+            var cabeceraHTML = document.head.innerHTML;
+            alert("Contenido de la cabecera:\n\n" + cabeceraHTML);
+        }
+
+        function mostrarCuerpo() {
+            var cuerpoHTML = document.body.innerHTML;
+            alert("Contenido del cuerpo:\n\n" + cuerpoHTML);
+        }
+    </script>
+</body>
+</html>
